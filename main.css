@@ -1,0 +1,48 @@
+.items{
+    margin-bottom:15px;
+    border-radius:20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3); 
+}
+.checked{
+    cursor:pointer;
+    background-color:#1be393;
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    margin-right:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.MuiSvgIcon-root{
+    color:#fff;
+}
+.checking{
+    cursor:pointer;
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    box-shadow: 0 0 8px rgba(0,0,0,0.3);
+    margin-right:20px;
+}
+.MuiSvgIcon-root{
+    color:#000;
+}
+.MuiListItemSecondaryAction-root,
+.makeStyles-root-9{
+    cursor:pointer;
+}
+.MuiInputBase{
+    width: 200px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50px;
+    width: 350px;
+    align-items:center;
+}
+.compleated{
+    opacity: 0.4;
+} 
