@@ -1,3 +1,6 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
 .items{
     margin-bottom:15px;
     border-radius:20px;
@@ -46,3 +49,16 @@
 .compleated{
     opacity: 0.4;
 } 
+@media screen and (max-width: 500px) {
+    .makeStyles-search-4{
+        width: 55% !important;
+        margin-left: 115px !important;
+    }
+    h1,h2{
+        font-size: 1.5em;
+    }
+    .row{
+        width: 320px;
+        margin-left: 20px;
+    }
+  }
