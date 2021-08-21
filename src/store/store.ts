@@ -30,7 +30,7 @@ class Store {
             done: false
         }
         if (/\S/.test(value)) {
-            this.todos.push(item)
+            this.todos.unshift(item)
         }
     }
     removeItem(id: number): void {
