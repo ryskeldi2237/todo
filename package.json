@@ -2,6 +2,7 @@
   "name": "todo",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ryskeldi2237.github.io/todo",
   "dependencies": {
     "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",
@@ -22,6 +23,8 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
