@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import {
   createStyles,
   withStyles,
@@ -6,6 +6,7 @@ import {
   Theme,
 } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import { TypeSetState } from './common'
 import Store from '../store/store'
 
 const BootstrapButton = withStyles({
@@ -45,9 +46,6 @@ const BootstrapButton = withStyles({
     },
   },
 })(Button);
-
-
-
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     margin: {
@@ -55,8 +53,11 @@ const useStyles = makeStyles((theme: Theme) =>
     },
   }),
 );
-
-function Buttons({ item, cleanValue }: any) {
+type TButton = {
+  item: string
+  cleanValue: TypeSetState<string>
+}
+const Buttons:FC<TButton> = ({item, cleanValue}) => {
   const classes = useStyles();
   const addItem = (): void => {
     Store.addTodo(item);

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {FC, useEffect} from 'react';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -18,9 +18,13 @@ const useStyles = makeStyles((theme: Theme) =>
     },
   }),
 );
-export const CheckboxList = observer(() => {
+export const CheckboxList:FC = observer(() => {
   const classes = useStyles();
-  Store.report()
+  useEffect(() => {
+    return () => {
+      Store.report()
+    }
+  }, [])
   return (
     <div>
       <h1>Completed tasks : {Store.count}</h1>
@@ -35,9 +39,7 @@ export const CheckboxList = observer(() => {
                     <CheckIcon></CheckIcon>
                   </div>
                   :
-                  <div className="checking" onClick={() => Store.changeCompleate(value.id)}>
-
-                  </div>
+                  <div className="checking" onClick={() => Store.changeCompleate(value.id)}></div>
               }
               <ListItemText id={labelId} primary={value.title} />
               <ListItemSecondaryAction onClick={() => Store.removeItem(value.id)}>

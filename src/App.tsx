@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { FC } from 'react';
 import Header from './components/Header'
 import {CheckboxList} from './components/CheckboxList'
 import Form from './components/Form'
 
-function App() {
+const App:FC = () => {
   return (
     <div className="app">
       <Header />

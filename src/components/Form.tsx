@@ -1,12 +1,8 @@
-import React, { useState } from 'react'
+import React, { FC,useState } from 'react'
 import { Input } from '@material-ui/core';
 import Buttons from './Buttons'
 
-interface TodoListProps {
-
-}
-
-const Form: React.FC<TodoListProps> = () => {
+const Form:FC = () => {
   const [value, setValue] = useState<string>(' ')
   return (
     <div>

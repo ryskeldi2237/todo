@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme: Theme) =>
   }),
 );
 
-export default function Header() {
+const Header:FC = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
@@ -100,3 +100,4 @@ export default function Header() {
     </div>
   );
 }
+export default Header

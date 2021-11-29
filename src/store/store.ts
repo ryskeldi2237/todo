@@ -1,15 +1,11 @@
 import { makeAutoObservable } from "mobx";
-interface TodoItem {
-    id: number,
-    title: string,
-    done: boolean;
-}
+import {ITodo} from '../components/interface'
 class Store {
     constructor() {
         makeAutoObservable(this)
     }
     count: number = 0;
-    todos: TodoItem[] = [
+    todos: ITodo[] = [
         {
         id: 0,
         title: 'Wake up at 8:00',
@@ -24,7 +20,7 @@ class Store {
         done: false
     }];
     addTodo(value: string) {
-        const item: TodoItem = {
+        const item: ITodo = {
             id: this.todos.length,
             title: value,
             done: false
